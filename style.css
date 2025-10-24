@@ -1,109 +1,245 @@
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
-    font-family: "Roboto", sans-serif;
-    font-size: 18px;
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
 }
-p{
-    font-size: 16px;
-    color: rgb(43, 43, 43);
+p {
+  font-size: 18px;
+  margin: 0px 0px 32px;
+  color: rgb(43, 43, 43);
 }
 
-#nav-bar .nav-bar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* background-color: orangered; */
-    padding-top: 20px;
-  
+#nav-bar .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ padding-bottom: 20px;
+  padding-top: 15px;
+  z-index: 1;
 }
-.nav-logo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-left: 25px;
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
 }
-#nav-bar .nav-logo img{
-    width: 50px;
-    /* height: 20px; */
-    border-radius: 50%;
-    object-fit: cover;
-    background-color: rgb(218, 88, 42);
-    padding: 5px;
+#nav-bar .nav-logo img {
+  width: 40px;
+  /* height: 20px; */
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #EF5B2A;;
+  padding: 5px;
 }
-#nav-bar .nav-logo h1{
-    color: rgb(218, 88, 42);
-    font-size: 20px;
+#nav-bar .nav-logo h1 {
+  color: rgb(218, 88, 42);
+  font-size: 20px;
 }
-#nav-bar .nav-links ul{
-    display: flex;
-    gap: 25px;
-    list-style: none;
-    padding-right: 70px;
-    
+#nav-bar .nav-links ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  padding-right: 20px;
 }
-a{
-    background-color: white;
-    color: black;
-    padding: 8px 16px;
-    border-radius: 15px;
-    text-decoration: none;
-    transition: 0.3s;
+a {
+  background-color: white;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: 0.3s;
 }
-a:hover{
-    background-color: rgb(218, 88, 42);
-    color: white;
-
-}   
-#hero .hero h1{
-    color: white;
+a:hover {
+  background-color: #EF5B2A;;
+  color: white;
+}
+#hero .hero h1 {
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  margin: 0px 0px 34px;
 }
 #hero .hero p{
-    color: white;
+  font-size: 20px;
 }
-#hero .hero{
-    height: 50vh;
-    background-image: url(./images/front-view-delicious-meat-cheeseburger-with-french-fries-cutting-board-dark-background-fast-food-meal-snack-dinner-dish-sandwich.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-gap: 20px;
+#hero .hero p {
+  color: white;
 }
-#hero .hero ::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(15, 15, 15, 0.4);
-    opacity: 0.7;
-}
-.hero{
-    position: relative;
-    color: white;
-    text-align: center;
-}
-input[type="search"]{
-    width: 380px;
-    padding: 10px 40px 10px 10px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    /* font-size: 16px; */
-    border: none;
-    background-image: url(./images/magnifying-glass.png);
-    background-repeat: no-repeat;
-    background-position: 10px center;
-    background-size: 18px;
-    background-position-x: right;
-   
+#hero .hero {
+  height: 60vh;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* gap: 20px; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/front-view-delicious-meat-cheeseburger-with-french-fries-cutting-board-dark-background-fast-food-meal-snack-dinner-dish-sandwich.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+.hero {
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+  .search-bar {
+  position: relative;
+  width: 630px;
+}
+
+.search-bar input[type="search"] {
+  width: 100%;
+  padding: 15px 50px 15px 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  
+  font-size: 16px;
+}
+
+.search-bar button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #EF5B2A; /* 👈 color around icon */
+  border: none;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.search-bar button img {
+  width: 18px;
+  height: 18px;
+  
+}
+/* 📱 MEDIA QUERIES FOR RESPONSIVENESS */
+/* ========================================================= */
+
+/* --- Small Mobile (up to 480px) --- */
+@media (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+
+  #nav-bar .nav-bar {
+    
+    align-items: flex-start;
+    gap: 10px;
+    
+  }
+
+  #nav-bar .nav-links ul {
+    
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 20px;
+  }
+
+  #hero .hero {
+    height: auto;
+    padding: 60px 20px;
+    background-position: center;
+    
+  }
+
+  #hero .hero h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  #hero .hero p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .search-bar {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .search-bar input[type="search"] {
+    font-size: 14px;
+    padding: 12px 45px 12px 15px;
+  }
+
+  .search-bar button img {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* --- Tablets (481px to 768px) --- */
+@media (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+
+  #nav-bar .nav-bar {
+    /* flex-direction: column; */
+    gap: 10px;
+  }
+
+  #nav-bar .nav-links ul {
+    gap: 15px;
+  }
+
+  #hero .hero {
+    height: 55vh;
+    padding: 40px 20px;
+  }
+
+  #hero .hero h1 {
+    font-size: 45px;
+  }
+
+  #hero .hero p {
+    font-size: 18px;
+  }
+
+  .search-bar {
+    width: 80%;
+  }
+
+  .search-bar input[type="search"] {
+    font-size: 16px;
+  }
+}
+
+/* --- Laptops (769px to 1024px) --- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #hero .hero h1 {
+    font-size: 50px;
+  }
+
+  .search-bar {
+    width: 500px;
+  }
+}
+
+/* --- Large Screens (1025px and above) --- */
+@media (min-width: 1025px) {
+  #hero .hero {
+    height: 70vh;
+  }
+
+  #hero .hero h1 {
+    font-size: 65px;
+  }
+
+  .search-bar {
+    width: 650px;
+  }
+}
+
 
