@@ -19,7 +19,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
- padding-bottom: 20px;
+  padding-bottom: 20px;
   padding-top: 15px;
   z-index: 1;
 }
@@ -34,7 +34,7 @@ p {
   /* height: 20px; */
   border-radius: 50%;
   object-fit: cover;
-  background-color: #EF5B2A;;
+  background-color: #ef5b2a;
   padding: 5px;
 }
 #nav-bar .nav-logo h1 {
@@ -56,7 +56,7 @@ a {
   transition: 0.3s;
 }
 a:hover {
-  background-color: #EF5B2A;;
+  background-color: #ef5b2a;
   color: white;
 }
 #hero .hero h1 {
@@ -64,7 +64,7 @@ a:hover {
   font-size: 60px;
   margin: 0px 0px 34px;
 }
-#hero .hero p{
+#hero .hero p {
   font-size: 20px;
 }
 #hero .hero p {
@@ -92,7 +92,7 @@ a:hover {
   text-align: center;
 }
 
-  .search-bar {
+.search-bar {
   position: relative;
   width: 630px;
 }
@@ -102,16 +102,16 @@ a:hover {
   padding: 15px 50px 15px 20px;
   border-radius: 20px;
   border: 1px solid #ccc;
-  
+
   font-size: 16px;
 }
 
 .search-bar button {
   position: absolute;
-  right: 5px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #EF5B2A; /* 👈 color around icon */
+  background-color: #ef5b2a; /* 👈 color around icon */
   border: none;
   border-radius: 50%;
   padding: 6px;
@@ -121,7 +121,6 @@ a:hover {
 .search-bar button img {
   width: 18px;
   height: 18px;
-  
 }
 /* 📱 MEDIA QUERIES FOR RESPONSIVENESS */
 /* ========================================================= */
@@ -133,24 +132,21 @@ a:hover {
   }
 
   #nav-bar .nav-bar {
-    
     align-items: flex-start;
     gap: 10px;
-    
   }
 
   #nav-bar .nav-links ul {
-    
     align-items: flex-start;
     gap: 10px;
     padding-left: 20px;
   }
-
+  /* check here  */
   #hero .hero {
-    height: auto;
-    padding: 60px 20px;
+    height: 100vh;
+    padding: 80px 20px;
+    background-size: cover;
     background-position: center;
-    
   }
 
   #hero .hero h1 {
@@ -176,6 +172,10 @@ a:hover {
   .search-bar button img {
     width: 14px;
     height: 14px;
+  }
+  .search-bar button {
+    right: 10px;
+    padding: 5px;
   }
 }
 
@@ -241,5 +241,165 @@ a:hover {
     width: 650px;
   }
 }
+/* Media queries ends  */
+/* Explore section start here  */
+.container1 {
+  display: flex;
+  flex-direction: column;
+  padding: 64px 0px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.textdiv {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+h2 {
+  color: #171312;
+  margin: 0px 0px 16px;
+  font-size: 36px;
+}
+.explore {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+}
 
+.exploreimg {
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img-box {
+  position: relative;
+  width: 300px;
+  height: 220px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.expimg {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+/* Always-visible overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  z-index: 1;
+}
+
+/* Text label */
+.label {
+  position: absolute;
+  bottom: 1px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+/* Hover zoom effect */
+.img-box:hover .expimg {
+  transform: scale(1.1);
+}
+/* Media queries  */
+/* 📱 Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .container1 {
+    padding: 32px 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .explore {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .exploreimg {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .img-box {
+    width: 100%;
+    max-width: 320px;
+    height: 200px;
+  }
+
+  .label {
+    font-size: 16px;
+    bottom: 5px;
+  }
+}
+
+/* 📱 Tablet (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container1 {
+    padding: 48px 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .explore {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .exploreimg {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .img-box {
+    width: 45%;
+    height: 220px;
+  }
+
+  .label {
+    font-size: 18px;
+  }
+}
+
+/* 💻 Small Laptop (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container1 {
+    padding: 64px 24px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .exploreimg {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .img-box {
+    width: 260px;
+    height: 200px;
+  }
+}
 
